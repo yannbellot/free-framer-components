@@ -1,6 +1,6 @@
-# Figleaf
+# Figleaf package for Framer
 
-Generate animated graphics with subtle random variations, without coding.
+Create graphic objects enriched with fine random variations on [Framer](https://www.framer.com), without coding.
 
 [→ View the Figleaf package page on framer.com](https://packages.framer.com/package/yann-bellot/figleaf)
 
