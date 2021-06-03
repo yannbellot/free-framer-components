@@ -8,7 +8,7 @@ To use Figleaf, go to [the Figleaf package page on framer.com](https://packages.
 
 Figleaf allows you to create textures, frames and shapes enriched with fine random variations in order to find in the design a formal richness close to that of nature. Create Perlin cloud with RGBA effects.
 
-[→ View the documentation and manifest in Medium](https://yannbellot.medium.com/figleaf-for-framer-1c53992f70c4)
+[→ View the manifest and the documentation in Medium](https://yannbellot.medium.com/figleaf-for-framer-1c53992f70c4)
 
 ## Color feature list
 * Create a simple frame with a random variation of the background colour
