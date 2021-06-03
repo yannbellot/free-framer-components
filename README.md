@@ -2,7 +2,7 @@
 
 Create graphic objects enriched with fine random variations on [Framer](https://www.framer.com), without coding.
 
-[→ View the Figleaf package page on framer.com](https://packages.framer.com/package/yann-bellot/figleaf)
+To use Figleaf, go to [the Figleaf package page on framer.com](https://packages.framer.com/package/yann-bellot/figleaf) and click on Open in Framer.
 
 ## Overview
 
