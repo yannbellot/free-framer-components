@@ -15,7 +15,7 @@ Figleaf allows you to create shapes enriched with fine random variations in orde
 * Adjust height
 * Activate or deactivate border
 * Adjust border color and size
-* Choose fill type : color, gradient or Perlin
+* Choose fill type : color, gradient or Perlin effect
 
 ### Circular shape
 * Diameter adjustment
