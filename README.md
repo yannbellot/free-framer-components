@@ -2,7 +2,7 @@
 
 Create graphic objects enriched with fine random variations on [Framer](https://www.framer.com), without coding.
 
-To use Figleaf, go to [the project in framer.com Showcase](https://www.framer.com/showcase/) and click on *Duplicate in Framer*.
+To use Figleaf, go to [the project in framer.com Showcase](https://www.framer.com/showcase/project/4pEqNr3MrRKLNECCLQtj/) and click on *Duplicate in Framer*.
 
 ## Overview
 
