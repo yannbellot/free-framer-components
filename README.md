@@ -8,7 +8,7 @@ To use Figleaf, go to [the project in framer.com Showcase](https://www.framer.co
 
 Figleaf allows you to create shapes enriched with fine random variations in order to find in the design a formal richness close to that of nature.
 
-## Shapes feature list
+## Feature list
 
 ### Rectangular shape
 * Adjust width
@@ -52,7 +52,5 @@ Figleaf allows you to create shapes enriched with fine random variations in orde
 * Adjust Frequency
 * Ajust Octave
 * Choose random or manual Seed
-
-### RGBA effect
-* Discrete or Table effect mode
+* choose RGBA effect : Discrete or Table
 * Adjust multi-zone of RGBA channel
