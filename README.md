@@ -8,8 +8,6 @@ To use Figleaf, go to [the project in framer.com Showcase](https://www.framer.co
 
 Figleaf allows you to create shapes enriched with fine random variations in order to find in the design a formal richness close to that of nature.
 
-[→ View the manifest and the documentation in Medium](https://yannbellot.medium.com/figleaf-for-framer-1c53992f70c4)
-
 ## Shapes feature list
 
 ### Rectangular shape
