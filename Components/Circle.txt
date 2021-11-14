@@ -1,0 +1,827 @@
+/*
+
+FIGLEAF V1.0 for Framer
+A component for subtle and natural random variation
+MIT License
+
+// The MIT License
+
+Copyright (c) 2021 Yann Bellot, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+*/
+
+import { addPropertyControls, ControlType, Color, Frame } from "framer"
+import { motion } from "framer-motion"
+import {
+    getRandomValue,
+    getRandomGap,
+    fIdLink,
+    fColor,
+    fLinearGradient,
+    fRadialGradient,
+    fStroke,
+    fCircle,
+} from "./BasicFunctions.tsx"
+import {
+    childControl,
+    useClonedChild,
+} from "https://framer.com/m/framer/useChild.js"
+
+var svgExport
+
+export default function Circle(props) {
+    // Stroke width
+    let strokeWidth = props.Stroke.strokeWidth
+
+    // Stroke color
+    let oStrokeColor = Color(props.Stroke.hslColorStroke)
+    let strokeColor = fColor(
+        oStrokeColor.h,
+        props.Stroke.rHueStroke,
+        oStrokeColor.s * 100,
+        props.Stroke.rSaturationStroke,
+        oStrokeColor.l * 100,
+        props.Stroke.rLuminosityStroke,
+        oStrokeColor.a * 100,
+        props.Stroke.rAlphaStroke
+    )
+
+    // Fill color
+    let oFillColor = Color(props.hslColorFill)
+    let fillColor = fColor(
+        oFillColor.h,
+        props.Fill.rHueFill,
+        oFillColor.s * 100,
+        props.Fill.rSaturationFill,
+        oFillColor.l * 100,
+        props.Fill.rLuminosityFill,
+        oFillColor.a * 100,
+        props.Fill.rAlphaFill
+    )
+
+    // Define the random coordonates of quadrilateral points
+    let points = fCircle(
+        props.diameter,
+        props.Stroke.strokeWidth,
+        props.intensity
+    )
+
+    // Return the code of quadrilateral
+    let diameter = props.diameter // Diameter of circle
+
+    // Mask ID generator
+    const characters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+    function generateString(length) {
+        let result = ""
+        const charactersLength = characters.length
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(
+                Math.floor(Math.random() * charactersLength)
+            )
+        }
+
+        return result
+    }
+
+    let randomID = generateString(6)
+    let maskID = "mask_" + randomID
+    let urlMaskID = "url(#" + maskID + ")"
+    let perlinID = "perlin_" + randomID
+    let urlPerlinID = "url(#" + perlinID + ")"
+
+    // Stop-color gradient
+    let oGradientColor = Color(props.Gradient.hslColorGradient)
+    let stopColor = fColor(
+        oGradientColor.h,
+        props.Gradient.rHueFillGradient,
+        oGradientColor.s * 100,
+        props.Gradient.rSaturationFillGradient,
+        oGradientColor.l * 100,
+        props.Gradient.rLuminosityFillGradient,
+        oGradientColor.a * 100,
+        props.Gradient.rAlphaFillGradient
+    )
+    let gradientType
+    let gradientColor
+    let gradientOrientation = getRandomGap(
+        props.gradientDeg,
+        props.rGradientDeg,
+        "TRIGO"
+    )
+
+    // Linear gradient
+    if (props.Gradient.gradientType === true) {
+        gradientColor = fLinearGradient(
+            props.Gradient.gradientDeg,
+            props.Gradient.rGradientDeg,
+            fillColor,
+            stopColor
+        )
+    }
+
+    if (props.Gradient.gradientType === false) {
+        gradientColor = fRadialGradient(
+            props.Gradient.radialType,
+            props.Gradient.hPosition,
+            props.Gradient.vPosition,
+            fillColor,
+            stopColor
+        )
+    }
+
+    // Perlin
+    let baseFrequency = props.Perlin.baseFrequency
+    let octaveTurb = props.Perlin.octaveTurb
+    let seedTurb = props.Perlin.seedTurb
+    if (props.Perlin.seedToggle === true) {
+        seedTurb = getRandomValue(1, 10000)
+    }
+
+    let effectType
+    if (props.effectToggle == 2) {
+        effectType = "discrete"
+    }
+    if (props.effectToggle == 3) {
+        effectType = "table"
+    }
+
+    let rTableValues
+    let gTableValues
+    let bTableValues
+    let aTableValues
+
+    // Discrete <feComponentTransfer> variables
+    if (props.effectToggle == 2) {
+        rTableValues = props.Red_discrete
+        gTableValues = props.Green_discrete
+        bTableValues = props.Blue_discrete
+        aTableValues = props.Alpha_discrete
+    }
+
+    // Table <feComponentTransfer> variables
+    if (props.effectToggle == 3) {
+        rTableValues = props.Red_table
+        gTableValues = props.Green_table
+        bTableValues = props.Blue_table
+        aTableValues = props.Alpha_table
+    }
+
+    // CSS styles
+
+    const divStyles = {
+        width: diameter,
+        height: diameter,
+        overflow: "visible",
+    }
+    const svgStyles = {
+        width: diameter,
+        height: diameter,
+        overflow: "visible",
+    }
+
+    const gradientStyles = {
+        width: diameter,
+        height: diameter,
+        backgroundImage: gradientColor,
+        overflow: "visible",
+    }
+
+    const perlinStyles = {
+        width: diameter,
+        height: diameter,
+        filter: urlPerlinID,
+        overflow: "visible",
+    }
+
+    if (props.typeToggle === "a") {
+        return (
+            <div style={divStyles}>
+                <svg style={svgStyles}>
+                    <path
+                        d={points}
+                        strokeWidth={strokeWidth}
+                        stroke={strokeColor}
+                        fill={fillColor}
+                    />
+                </svg>
+            </div>
+        )
+    }
+
+    if (props.typeToggle === "b") {
+        return (
+            <div style={divStyles}>
+                <svg style={svgStyles}>
+                    <mask id={maskID}>
+                        <path d={points} fill="white" />
+                    </mask>
+                    <foreignObject
+                        width={diameter}
+                        height={diameter}
+                        mask={urlMaskID}
+                    >
+                        <div style={gradientStyles}></div>
+                    </foreignObject>
+                    <path
+                        d={points}
+                        strokeWidth={strokeWidth}
+                        stroke={strokeColor}
+                        fill="none"
+                    />
+                </svg>
+            </div>
+        )
+    }
+    if (props.typeToggle === "c") {
+        if (props.effectToggle === 1) {
+            return (
+                <div style={divStyles}>
+                    <svg style={svgStyles}>
+                        <mask id={maskID}>
+                            <path d={points} fill="white" />
+                        </mask>
+                        <filter id={perlinID}>
+                            <feTurbulence
+                                type="turbulence"
+                                baseFrequency={baseFrequency}
+                                numOctaves={octaveTurb}
+                                result="turbulence"
+                                seed={seedTurb}
+                            />
+                        </filter>
+                        <rect
+                            x="0"
+                            y="0"
+                            width={diameter}
+                            height={diameter}
+                            filter={urlPerlinID}
+                            mask={urlMaskID}
+                        />
+                        <path
+                            d={points}
+                            strokeWidth={strokeWidth}
+                            stroke={strokeColor}
+                            fill="none"
+                        />
+                    </svg>
+                </div>
+            )
+        } else
+            return (
+                <div style={divStyles}>
+                    <svg style={svgStyles}>
+                        <mask id={maskID}>
+                            <path d={points} fill="white" />
+                        </mask>
+                        <filter id={perlinID}>
+                            <feTurbulence
+                                type="turbulence"
+                                baseFrequency={baseFrequency}
+                                numOctaves={octaveTurb}
+                                result="turbulence"
+                                seed={seedTurb}
+                            />
+                            <feComponentTransfer>
+                                <feFuncR
+                                    type={effectType}
+                                    tableValues={rTableValues}
+                                ></feFuncR>
+                                <feFuncG
+                                    type={effectType}
+                                    tableValues={gTableValues}
+                                ></feFuncG>
+                                <feFuncB
+                                    type={effectType}
+                                    tableValues={bTableValues}
+                                ></feFuncB>
+                                <feFuncA
+                                    type={effectType}
+                                    tableValues={aTableValues}
+                                ></feFuncA>
+                            </feComponentTransfer>
+                        </filter>
+                        <rect
+                            x="0"
+                            y="0"
+                            width={diameter}
+                            height={diameter}
+                            filter={urlPerlinID}
+                            mask={urlMaskID}
+                        />
+                        <path
+                            d={points}
+                            strokeWidth={strokeWidth}
+                            stroke={strokeColor}
+                            fill="none"
+                        />
+                    </svg>
+                </div>
+            )
+    }
+}
+
+// Property Controls
+addPropertyControls(Circle, {
+    diameter: {
+        type: ControlType.Number,
+        title: "Diameter",
+        defaultValue: 200,
+        min: 1,
+        max: 10000,
+        step: 1,
+        displayStepper: true,
+    },
+    intensity: {
+        type: ControlType.Number,
+        title: "~intensity",
+        defaultValue: 0,
+        min: 0,
+        max: 10,
+        unit: "%",
+        step: 0.1,
+        displayStepper: false,
+        hidden(props) {
+            return props.Distortion === false
+        },
+    },
+
+    // Stroke
+    Stroke: {
+        type: ControlType.Object,
+        controls: {
+            hslColorStroke: {
+                type: ControlType.Color,
+                title: "Color",
+                defaultValue: "hsla(50, 100%, 50%, 1)",
+            },
+            strokeWidth: {
+                type: ControlType.Number,
+                title: "Width",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                step: 1,
+                displayStepper: false,
+            },
+            rHueStroke: {
+                type: ControlType.Number,
+                title: "~hue",
+                defaultValue: 0,
+                min: 0,
+                max: 360,
+                unit: "°",
+                step: 1,
+                displayStepper: false,
+            },
+            rSaturationStroke: {
+                type: ControlType.Number,
+                title: "~saturation",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+            },
+            rLuminosityStroke: {
+                type: ControlType.Number,
+                title: "~luminosity",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+            },
+            rAlphaStroke: {
+                type: ControlType.Number,
+                title: "~alpha",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+            },
+        },
+    },
+
+    typeToggle: {
+        type: ControlType.Enum,
+        defaultValue: "a",
+        options: ["a", "b", "c"],
+        optionTitles: ["Solid", "Gradient", "Perlin"],
+        title: "Fill",
+    },
+    hslColorFill: {
+        type: ControlType.Color,
+        title: "Color",
+        defaultValue: "hsla(248, 100%, 50%, 1)",
+        hidden(props) {
+            return props.typeToggle == "c"
+        },
+    },
+
+    // Fill color
+    Fill: {
+        type: ControlType.Object,
+        controls: {
+            rHueFill: {
+                type: ControlType.Number,
+                title: "~hue",
+                defaultValue: 0,
+                min: 0,
+                max: 360,
+                unit: "°",
+                step: 1,
+                displayStepper: false,
+            },
+            rSaturationFill: {
+                type: ControlType.Number,
+                title: "~saturation",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+            },
+            rLuminosityFill: {
+                type: ControlType.Number,
+                title: "~luminosity",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+            },
+            rAlphaFill: {
+                type: ControlType.Number,
+                title: "~alpha",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+            },
+        },
+        hidden(props) {
+            return props.typeToggle == "c"
+        },
+    },
+
+    // Gradient
+    Gradient: {
+        type: ControlType.Object,
+        controls: {
+            gradientType: {
+                type: ControlType.Boolean,
+                title: "Type",
+                defaultValue: true,
+                enabledTitle: "Linear",
+                disabledTitle: "Radial",
+            },
+            // Linear gradient
+            gradientDeg: {
+                type: ControlType.Number,
+                title: "Deg",
+                defaultValue: 0,
+                min: 0,
+                max: 360,
+                unit: "°",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.gradientType === false
+                },
+            },
+            rGradientDeg: {
+                type: ControlType.Number,
+                title: "~deg",
+                defaultValue: 0,
+                min: 0,
+                max: 360,
+                unit: "°",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.gradientType === false
+                },
+            },
+
+            // Radial gradient
+            radialType: {
+                type: ControlType.Enum,
+                defaultValue: "a",
+                options: ["circle", "ellipse"],
+                optionTitles: ["circle", "ellipse"],
+                title: "Type",
+                hidden(props) {
+                    return props.gradientType === true
+                },
+            },
+            hPosition: {
+                type: ControlType.Number,
+                title: "x Position",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.gradientType === true
+                },
+            },
+            vPosition: {
+                type: ControlType.Number,
+                title: "y Position",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.gradientType === true
+                },
+            },
+
+            // Gradient color
+            hslColorGradient: {
+                type: ControlType.Color,
+                title: "Color 2",
+                defaultValue: "hsla(100, 100%, 50%, 1)",
+            },
+            rHueFillGradient: {
+                type: ControlType.Number,
+                title: "~hue",
+                defaultValue: 0,
+                min: 0,
+                max: 360,
+                unit: "°",
+                step: 1,
+                displayStepper: false,
+            },
+
+            rSaturationFillGradient: {
+                type: ControlType.Number,
+                title: "~saturation",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.fillToogle === false
+                },
+            },
+            rLuminosityFillGradient: {
+                type: ControlType.Number,
+                title: "~luminosity",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.fillToogle === false
+                },
+            },
+            rAlphaFillGradient: {
+                type: ControlType.Number,
+                title: "~alpha",
+                defaultValue: 0,
+                min: 0,
+                max: 100,
+                unit: "%",
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.fillToogle === false
+                },
+            },
+        },
+        hidden(props) {
+            return props.typeToggle == "c" || props.typeToggle == "a"
+        },
+    },
+    Perlin: {
+        type: ControlType.Object,
+        title: "Turbulences",
+        controls: {
+            baseFrequency: {
+                type: ControlType.Number,
+                title: "Frequency",
+                defaultValue: 0.01,
+                min: 0.0001,
+                max: 1.9999,
+                step: 0.001,
+                displayStepper: false,
+            },
+            octaveTurb: {
+                type: ControlType.Number,
+                title: "Octave",
+                defaultValue: 3,
+                min: 1,
+                max: 5,
+                step: 1,
+                displayStepper: false,
+            },
+            seedToggle: {
+                type: ControlType.Boolean,
+                title: "Seed",
+                defaultValue: true,
+                enabledTitle: "Random",
+                disabledTitle: "Manual",
+            },
+            seedTurb: {
+                type: ControlType.Number,
+                title: "Value",
+                defaultValue: 1,
+                min: 1,
+                max: 1000,
+                step: 1,
+                displayStepper: false,
+                hidden(props) {
+                    return props.seedToggle === true
+                },
+            },
+        },
+        hidden(props) {
+            return props.typeToggle == "b" || props.typeToggle == "a"
+        },
+    },
+    // Rgba <feComponentTransfer> control
+    effectToggle: {
+        type: ControlType.Enum,
+        title: "rgba Effect",
+        options: [1, 2, 3],
+        optionTitles: ["None", "Discrete", "Table"],
+        hidden(props) {
+            return props.typeToggle == "b" || props.typeToggle == "a"
+        },
+    },
+    // Rgba discrete control
+    Red_discrete: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 0.5,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 3
+        },
+        defaultValue: [0, 0.5, 0.25],
+        maxCount: 5,
+    },
+    Green_discrete: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 0,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 3
+        },
+        defaultValue: [0, 0.75, 0.25],
+        maxCount: 5,
+    },
+    Blue_discrete: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 0,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 3
+        },
+        defaultValue: [0.25, 0.75, 0],
+        maxCount: 5,
+    },
+    Alpha_discrete: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 1,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 3
+        },
+        defaultValue: [1, 1, 1],
+        maxCount: 5,
+    },
+    // Rgba table control
+    Red_table: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 0.5,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 2
+        },
+        defaultValue: [0, 0.5, 0.25],
+        maxCount: 5,
+    },
+    Green_table: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 0,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 2
+        },
+        defaultValue: [0, 0.75, 0.25],
+        maxCount: 5,
+    },
+    Blue_table: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 0,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 2
+        },
+        defaultValue: [0.25, 0.75, 0],
+        maxCount: 5,
+    },
+    Alpha_table: {
+        type: ControlType.Array,
+        control: {
+            type: ControlType.Number,
+            title: "Value",
+            defaultValue: 1,
+            min: 0,
+            max: 1,
+            step: 0.01,
+            displayStepper: false,
+        },
+        hidden(props) {
+            return props.effectToggle === 1 || props.effectToggle === 2
+        },
+        defaultValue: [1, 1, 1],
+        maxCount: 5,
+    },
+})
