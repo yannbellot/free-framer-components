@@ -34,7 +34,7 @@ Figleaf allows you to create shapes enriched with fine random variations in orde
 * Saturation random level adjustment
 * Lightness random level adjustment
 
-### Adjust random of gradient
+### Adjust random of gradient full
 * Choose linear or radial gradient
 * Choose stop colors of gradient
 * Adjust hue random level
@@ -48,14 +48,10 @@ Figleaf allows you to create shapes enriched with fine random variations in orde
 * Adjust lightness random level
 * Morphing animation loop
 
-## Perlin feature list
-
-### Create Perlin cloud
-* Create a simple frame with Perlin cloud
+### Adjust Perlin cloud fill
 * Adjust Frequency
 * Ajust Octave
 * Choose random or manual Seed
-* *Some display bugs in Design but Preview work normally.*
 
 ### RGBA effect
 * Discrete or Table effect mode
