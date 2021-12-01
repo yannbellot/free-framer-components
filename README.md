@@ -13,53 +13,43 @@ To use Figleaf :
 * Install framer on your computer or access its web version
 * Go to [the project in framer.com Showcase](https://www.framer.com/showcase/project/sOrHUTSYXT7302rRXCrC/) and click on *Duplicate in Framer*.
 
-## Overview
-
-Figleaf allows you to create shapes enriched with fine random variations in order to find in the design a formal richness close to that of nature.
-
 ## Feature list
 
-### Rectangular shape
-* Adjust width
-* Adjust height
-* Activate or deactivate border
-* Adjust border color and size
-* Choose fill type : color, gradient or Perlin effect
+### Distortion component (Perlin noise)
+* Adjust Intensity of distortion
+* Adjust Frequency in x and y
+* Adjust Octave
+* Choose between Random and Manual Seed
+* Adjust value of Manual Seed
+* Apply distortion to a child element
 
-### Circular shape
-* Diameter adjustment
-* Activate or deactivate border
-* Border color and size adjustment
-* Choose fill type : color, gradient or Perlin
+### Pattern component
 
-### Random shape transformation
-* Adjust the level of random dimension in with and height for rectangle and diameter for circle
-* Adjust the level of random distortion
-* Disable random transformation of segments (top, right, bottom, left) for rectangle
+* Choose between Solid, Gradient and Perlin pattern
 
-### Adjust random variations of border color
-* Adjust hue random level
-* Adjust saturation random level
-* Adjust lightness random level
-* Morphing animation loop
-
-### Adjust random variations of fill color
+#### Solid pattern
 * Choose color
-* Hue random level adjustment
-* Saturation random level adjustment
-* Lightness random level adjustment
+* Adjust Hue random level
+* Adjust Saturation random level
+* Adjust Lightness random level
+* Adjust Alpha random level
 
-### Adjust random variations of gradient
-* Choose linear or radial gradient
-* Choose stop colors of gradient
-* Adjust hue random level
-* Adjust saturation random level
-* Adjust lightness random level
+### Gradient pattern
+* Choose between Linear and Radial gradient
+* Choose between Circular and Elliptic repartition for Radial gradient
+* Choose stop color of gradient
+* Adjust Hue random level of stop color
+* Adjust Saturation random level of stop color
+* Adjust Lightness random level of stop color
+* Adjust Alpha random level of stop color
 * Adjust gradient distribution and orientation
 
-### Adjust Perlin effect
-* Adjust Frequency
-* Ajust Octave
-* Choose random or manual Seed
-* Choose RGBA effect : Discrete or Table
-* Adjust multi-zone of RGBA channel
+### Perlin pattern
+* Choose between Turbulence and Fractal noise
+* Adjust Frequency in x and y
+* Adjust Octave
+* Choose between Random and Manual Seed
+* Adjust value of Manual Seed
+* Choose between Discrete and Table RGBA effect or Lighting effect
+* Adjust multi-zone of RGBA channels
+* Adjust Color and Intensity of Lighting effect
