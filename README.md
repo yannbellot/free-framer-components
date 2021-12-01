@@ -1,4 +1,4 @@
-# Figleaf package for Framer
+# Figleaf components for Framer
 
 Create graphic objects enriched with fine random variations on [Framer](https://www.framer.com), without coding.
 
