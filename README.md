@@ -8,7 +8,10 @@ The Pattern component allows the creation of colours and gradients whose charact
 
 The association of the 2 components Pattern and Distortion allows the creation of graphic forms of an infinite richness.
 
-To use Figleaf, go to [the project in framer.com Showcase](https://www.framer.com/showcase/project/sOrHUTSYXT7302rRXCrC/) and click on *Duplicate in Framer*.
+To use Figleaf :
+* Create a framer account
+* Install framer on your computer or access its web version
+* Go to [the project in framer.com Showcase](https://www.framer.com/showcase/project/sOrHUTSYXT7302rRXCrC/) and click on *Duplicate in Framer*.
 
 ## Overview
 
