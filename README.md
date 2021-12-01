@@ -1,10 +1,12 @@
 # Figleaf components for Framer
 
-Figleaf allows the designer to create in [Framer](https://www.framer.com) graphic elements close to those found in nature without coding.
+Figleaf allows the designer to create graphic elements close to those found in nature without coding.
 
 The Distortion component allows a Perlin noise type deformation to be applied to a graphic object.
 
 The Pattern component allows the creation of colours and gradients whose characteristics (hue, saturation, luminosity, alpha) are partially defined using random variables. It also allows the generation of graphics using different Perlin noise functions.
+
+The association of the 2 components Pattern and Distortion allows the creation of graphic forms of an infinite richness.
 
 To use Figleaf, go to [the project in framer.com Showcase](https://www.framer.com/showcase/project/sOrHUTSYXT7302rRXCrC/) and click on *Duplicate in Framer*.
 
