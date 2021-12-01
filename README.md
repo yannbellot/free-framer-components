@@ -27,14 +27,14 @@ To use Figleaf :
 
 * Choose between Solid, Gradient and Perlin pattern
 
-#### Solid pattern
+#### Solid color
 * Choose color
 * Adjust Hue random level
 * Adjust Saturation random level
 * Adjust Lightness random level
 * Adjust Alpha random level
 
-#### Gradient pattern
+#### Gradient color
 * Choose between Linear and Radial gradient
 * Choose between Circular and Elliptic repartition for Radial gradient
 * Choose stop color of gradient
@@ -44,7 +44,7 @@ To use Figleaf :
 * Adjust Alpha random level of stop color
 * Adjust gradient distribution and orientation
 
-#### Perlin pattern
+#### Perlin noise
 * Choose between Turbulence and Fractal noise
 * Adjust Frequency in x and y
 * Adjust Octave
