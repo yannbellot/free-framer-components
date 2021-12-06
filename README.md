@@ -50,6 +50,6 @@ To use Figleaf :
 * Adjust Octave
 * Choose between Random and Manual Seed
 * Adjust value of Manual Seed
-* Choose between Lighting effect and RGBA effects : Discrete, Table, Linear or Gamma
+* Choose between Discrete, Table, Linear and Gamma RGBA effects and Lighting effect
 * Adjust multi-zone of RGBA effects
 * Adjust Color, Intensity, Azimut and Elevation of Lighting effect
