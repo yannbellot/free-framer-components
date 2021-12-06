@@ -10,7 +10,7 @@ The association of the 2 components Pattern and Distortion allows the creation o
 
 To use Figleaf :
 * [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F).
-* Install Framer on your computer or access its web version.
+* Access to web version of Framer or install Framer on your computer.
 * Create two code files in Framer and copy and paste code of two components.
 
 ## Feature list
