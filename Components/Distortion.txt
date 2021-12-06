@@ -1,0 +1,172 @@
+/*
+
+FIGLEAF V1.0 for Framer
+A component for subtle and natural random variation
+MIT License
+
+// The MIT License
+
+Copyright (c) 2021 Yann Bellot, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+*/
+
+import { addPropertyControls, ControlType, Color, Frame } from "framer"
+import { motion } from "framer-motion"
+import {
+    getRandomValue,
+    getRandomGap,
+    fIdLink,
+    generateString,
+    fColor,
+    fLinearGradient,
+    fRadialGradient,
+    fStroke,
+    fRect,
+} from "./BasicFunctions.tsx"
+import {
+    childControl,
+    useClonedChild,
+} from "https://framer.com/m/framer/useChild.js"
+
+export default function Distortion(props) {
+    // Random filter ID generator
+    let randomID = generateString(6)
+    let filterID = "filter_" + randomID
+    let filterURL = "url(#" + filterID + ")"
+
+    // Filter parameters
+    let xFrequency = props.xFrequency
+    let yFrequency = props.yFrequency
+    let baseFrequency = xFrequency + " " + yFrequency
+    let filterScale = -props.filterScale
+    let octaveTurb = props.octaveTurb
+    let seedTurb = props.seedTurb
+    if (props.seedToggle === true) {
+        seedTurb = getRandomValue(1, 10000)
+    }
+
+    // CSS styles
+    const divStyles = {
+        width: "100%",
+        height: "100%",
+        overflow: "visible",
+    }
+    const svgStyles = {
+        overflow: "visible",
+    }
+    const childrenStyles = {
+        width: "100%",
+        height: "100%",
+        webkitFilter: filterURL,
+        filter: filterURL,
+        overflow: "visible",
+    }
+
+    // Return SVG code
+    return (
+        <>
+            <svg style={svgStyles}>
+                <filter id={filterID} x="0%" y="0%" width="100%" height="100%">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency={baseFrequency}
+                        result={filterID}
+                        numOctaves={octaveTurb}
+                        seed={seedTurb}
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2={filterID}
+                        scale={filterScale}
+                        xChannelSelector="G"
+                        yChannelSelector="G"
+                    ></feDisplacementMap>
+                </filter>
+                <foreignObject style={divStyles}>
+                    <div style={childrenStyles}>{props.children}</div>
+                </foreignObject>
+            </svg>
+        </>
+    )
+}
+
+// Property Controls
+addPropertyControls(Distortion, {
+    children: {
+        type: ControlType.ComponentInstance,
+        description: "[Documentation](https://google.com)",
+    },
+    filterScale: {
+        type: ControlType.Number,
+        title: "Intensity",
+        defaultValue: 20,
+        min: 0,
+        max: 1000,
+        step: 1,
+        displayStepper: false,
+    },
+    xFrequency: {
+        type: ControlType.Number,
+        title: "x Frequency",
+        defaultValue: 0.01,
+        min: 0,
+        max: 1,
+        step: 0.0001,
+        displayStepper: false,
+    },
+    yFrequency: {
+        type: ControlType.Number,
+        title: "y Frequency",
+        defaultValue: 0.01,
+        min: 0,
+        max: 1,
+        step: 0.0001,
+        displayStepper: false,
+    },
+    octaveTurb: {
+        type: ControlType.Number,
+        title: "Octave",
+        defaultValue: 3,
+        min: 1,
+        max: 5,
+        step: 1,
+        displayStepper: false,
+    },
+    seedToggle: {
+        type: ControlType.Boolean,
+        title: "Seed",
+        defaultValue: true,
+        enabledTitle: "Random",
+        disabledTitle: "Manual",
+    },
+    seedTurb: {
+        type: ControlType.Number,
+        title: "Value",
+        defaultValue: 1,
+        min: 1,
+        max: 1000,
+        step: 1,
+        displayStepper: false,
+        hidden(props) {
+            return props.seedToggle === true
+        },
+    },
+})
