@@ -13,7 +13,7 @@ To use Figleaf :
 * Access to web version of Framer or install Framer on your computer.
 * Create two code files in Framer and copy and paste code of two components.
 
-Note : Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
+Warning: Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
 
 ## Feature list
 
