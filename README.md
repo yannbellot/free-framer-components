@@ -9,9 +9,9 @@ Figleaf is a package fo two compoenents, allows the designer to create graphic e
 The association of the 2 components Pattern and Distortion allows the creation of graphic forms and textures of an infinite richness.
 
 To use Figleaf :
-* [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F)
-* Install Framer on your computer or access its web version
-* Copy and paste .
+* [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F).
+* Install Framer on your computer or access its web version.
+* Create two code files in Framer and copy and paste code of two components.
 
 ## Feature list
 
