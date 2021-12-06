@@ -11,7 +11,8 @@ The association of the 2 components Pattern and Distortion allows the creation o
 To use Figleaf :
 * [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F).
 * Access to web version of Framer or install Framer on your computer.
-* Create two code files in Framer and copy/paste code of two components.
+* Create 3 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt` and `Pattern.txt`
+* Copy/paste code of 3 components.
 
 Warning: Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
 
