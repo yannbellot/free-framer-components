@@ -2,7 +2,7 @@
 
 Figleaf is a package fo two compoenents, allows the designer to create graphic elements close to those found in nature without coding :
 
-* 'Distortion' component allows a Perlin noise type deformation to be applied to a graphic object.
+* `Distortion` component allows a Perlin noise type deformation to be applied to a graphic object.
 
 * Pattern component allows the creation of colours and gradients whose characteristics (hue, saturation, luminosity, alpha) are partially defined using random variables. It also allows the generation of graphics using different Perlin noise functions.
 
