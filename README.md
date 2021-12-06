@@ -1,4 +1,4 @@
-# Figleaf components for Framer
+# Figleaf package for Framer
 
 Figleaf is a package fo two compoenents, allows the designer to create graphic elements and textures close to those found in nature without coding :
 
