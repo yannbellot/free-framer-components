@@ -13,7 +13,7 @@ Figleaf allows the creation of graphic forms and textures of an infinite richnes
 To use Figleaf :
 * [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F).
 * Access to web version of Framer or install Framer on your computer.
-* Create 3 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt`, `Pattern.txt`, `Rectangle.txt` and `Circular.txt`
+* Create 5 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt`, `Pattern.txt`, `Rectangle.txt` and `Circular.txt`
 * Copy/paste code of components.
 * Have fun !
 
