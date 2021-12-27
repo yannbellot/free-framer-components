@@ -162,6 +162,7 @@ function fRect(
     height,
     strokeWidth,
     distortion,
+    undo_side,
     top,
     right,
     bottom,
@@ -190,21 +191,23 @@ function fRect(
     )
 
     // Undo distortion of polygon sides (top, left, bottom, right)
-    if (top == false) {
-        y1 = 0 + strokeWidth / 2
-        y2 = y1
-    }
-    if (right == false) {
-        x2 = width - strokeWidth / 2
-        x3 = x2
-    }
-    if (bottom == false) {
-        y3 = height - strokeWidth / 2
-        y4 = y3
-    }
-    if (left == false) {
-        x1 = 0 + strokeWidth / 2
-        x4 = x1
+    if (undo_side === false) {
+        if (top == false) {
+            y1 = 0 + strokeWidth / 2
+            y2 = y1
+        }
+        if (right == false) {
+            x2 = width - strokeWidth / 2
+            x3 = x2
+        }
+        if (bottom == false) {
+            y3 = height - strokeWidth / 2
+            y4 = y3
+        }
+        if (left == false) {
+            x1 = 0 + strokeWidth / 2
+            x4 = x1
+        }
     }
 
     // Make SVG string of quadrilateral points attribute
