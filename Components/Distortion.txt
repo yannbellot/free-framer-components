@@ -31,6 +31,10 @@ THE SOFTWARE.
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
 import { motion } from "framer-motion"
 import {
+    childControl,
+    useClonedChild,
+} from "https://framer.com/m/framer/useChild.js"
+import {
     getRandomValue,
     getRandomGap,
     fIdLink,
@@ -41,10 +45,6 @@ import {
     fStroke,
     fRect,
 } from "./BasicFunctions.tsx"
-import {
-    childControl,
-    useClonedChild,
-} from "https://framer.com/m/framer/useChild.js"
 
 // Distortion function
 export default function Distortion(props) {
