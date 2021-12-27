@@ -8,7 +8,7 @@ Figleaf is a package fo two compoenents, allows the designer to create graphic e
 
 * Circle and Rectangle components allow you to create partially determined shapes using random variables.
 
-The association of the 2 components Pattern and Distortion allows the creation of graphic forms and textures of an infinite richness.
+Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
 To use Figleaf :
 * [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F).
