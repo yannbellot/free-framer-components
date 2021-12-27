@@ -32,7 +32,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Disable random transformation of segments (top, right, bottom, left)
 
 #### Circular shape
-* Diameter adjustment
+* Adjust diameter
 * Activate or deactivate border
 * Border color and size adjustment
 * Adjust the level of random distortion
