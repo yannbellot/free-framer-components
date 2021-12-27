@@ -11,10 +11,10 @@ Figleaf is a package fo 4 compoenents, allows the designer to create graphic ele
 Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
 To use Figleaf :
-* [Create a Framer account](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F).
+* [Create a Framer account.](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F)
 * Access to web version of Framer or install Framer on your computer.
 * Create 5 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt`, `Pattern.txt`, `Rectangle.txt` and `Circular.txt`
-* Copy/paste code of components.
+* Copy/paste code of [components.](https://github.com/yannbellot/figleaf-framer/tree/main/Components)
 * Have fun !
 
 Warning: Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
