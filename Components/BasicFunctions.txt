@@ -74,6 +74,22 @@ function fIdLink(id) {
     return link
 }
 
+// Mask ID generator
+const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+// Random identifier generator
+function generateString(length) {
+    let result = ""
+    const charactersLength = characters.length
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(
+            Math.floor(Math.random() * charactersLength)
+        )
+    }
+    return result
+}
+
 // Figleaf color function
 function fColor(
     hColor,
@@ -213,9 +229,9 @@ function fRect(
 }
 
 // Figleaf circle "d" points function
+
 function fCircle(diameter, strokeWidth, distortion) {
     //distortion = distortion / 100
-
     let thisRandomStepDiameter = (diameter / 2) * (distortion / 100)
     console.log(thisRandomStepDiameter)
     let radius =
@@ -242,7 +258,7 @@ function fCircle(diameter, strokeWidth, distortion) {
     let x4 = rX4
     let y4 = radius + rY4
 
-    //  Random handles generator
+    // Random handles generator
     let rX1handl = getRandomValue(0, thisRandomStep)
     let rX2handl = getRandomValue(0, thisRandomStep)
     let rX3handl = getRandomValue(0, thisRandomStep)
@@ -252,6 +268,7 @@ function fCircle(diameter, strokeWidth, distortion) {
     let rY3handl = getRandomValue(0, thisRandomStep)
     let rY4handl = getRandomValue(0, thisRandomStep)
 
+    // Define coordinate of circle points
     let x1a = radius - radius * alpha + rX1handl + rX1
     let y1a = rY1handl + rY1
     let x1b = radius + radius * alpha - rX1handl + rX1
@@ -326,10 +343,12 @@ function fCircle(diameter, strokeWidth, distortion) {
     return randomSvgCircle
 }
 
+// Function exports
 export {
     getRandomValue,
     getRandomGap,
     fIdLink,
+    generateString,
     fColor,
     fLinearGradient,
     fRadialGradient,
