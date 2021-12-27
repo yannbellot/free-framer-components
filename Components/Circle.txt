@@ -31,6 +31,10 @@ THE SOFTWARE.
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
 import { motion } from "framer-motion"
 import {
+    childControl,
+    useClonedChild,
+} from "https://framer.com/m/framer/useChild.js"
+import {
     getRandomValue,
     getRandomGap,
     fIdLink,
@@ -41,10 +45,6 @@ import {
     fStroke,
     fCircle,
 } from "./BasicFunctions.tsx"
-import {
-    childControl,
-    useClonedChild,
-} from "https://framer.com/m/framer/useChild.js"
 
 // Circle function
 export default function Circle(props) {
@@ -160,14 +160,6 @@ addPropertyControls(Circle, {
         enabledTitle: "No",
         disabledTitle: "Yes",
     },
-    hslColorStroke: {
-        type: ControlType.Color,
-        title: "Color",
-        defaultValue: "hsla(329, 100%, 50%, 1)",
-        hidden(props) {
-            return props.undo_stroke === true
-        },
-    },
     strokeWidth: {
         type: ControlType.Number,
         title: "Width",
@@ -176,6 +168,14 @@ addPropertyControls(Circle, {
         max: 100,
         step: 1,
         displayStepper: false,
+        hidden(props) {
+            return props.undo_stroke === true
+        },
+    },
+    hslColorStroke: {
+        type: ControlType.Color,
+        title: "Color",
+        defaultValue: "hsla(329, 100%, 50%, 1)",
         hidden(props) {
             return props.undo_stroke === true
         },
