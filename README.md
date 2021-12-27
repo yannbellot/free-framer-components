@@ -21,26 +21,21 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 ## Feature list
 
-### Shape feature list
-
-#### Rectangular shape
+### Rectangular component
 * Adjust width
 * Adjust height
 * Activate or deactivate border
 * Adjust border color and size
+* Adjust hsla random levels of border color
 * Adjust the level of random distortion
 * Disable random transformation of segments (top, right, bottom, left)
 
-#### Circular shape
+### Circular component
 * Adjust diameter
 * Activate or deactivate border
 * Border color and size adjustment
+* Adjust hsla random levels of border color
 * Adjust the level of random distortion
-
-#### Adjust random variations of border color
-* Adjust hue random level
-* Adjust saturation random level
-* Adjust lightness random level
 
 ### Distortion component (Perlin noise)
 * Adjust Intensity of distortion
