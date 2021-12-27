@@ -46,6 +46,7 @@ import {
     useClonedChild,
 } from "https://framer.com/m/framer/useChild.js"
 
+// Distortion function
 export default function Distortion(props) {
     // Random filter ID generator
     let randomID = generateString(6)
@@ -75,12 +76,12 @@ export default function Distortion(props) {
     const childrenStyles = {
         width: "100%",
         height: "100%",
-        webkitFilter: filterURL,
+        WebkitFilter: filterURL,
         filter: filterURL,
         overflow: "visible",
     }
 
-    // Return SVG code
+    // SVG code distortion return
     return (
         <>
             <svg style={svgStyles}>
@@ -96,8 +97,6 @@ export default function Distortion(props) {
                         in="SourceGraphic"
                         in2={filterID}
                         scale={filterScale}
-                        xChannelSelector="G"
-                        yChannelSelector="G"
                     ></feDisplacementMap>
                 </filter>
                 <foreignObject style={divStyles}>
