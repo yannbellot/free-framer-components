@@ -31,6 +31,10 @@ THE SOFTWARE.
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
 import { motion } from "framer-motion"
 import {
+    childControl,
+    useClonedChild,
+} from "https://framer.com/m/framer/useChild.js"
+import {
     getRandomValue,
     getRandomGap,
     fIdLink,
@@ -41,10 +45,6 @@ import {
     fStroke,
     fRect,
 } from "./BasicFunctions.tsx"
-import {
-    childControl,
-    useClonedChild,
-} from "https://framer.com/m/framer/useChild.js"
 
 // Rectangle function
 export default function Rectangle(props) {
@@ -108,26 +108,28 @@ export default function Rectangle(props) {
 
     // SVG rectangle return
     return (
-        <div style={divStyles}>
-            <svg style={svgStyles}>
-                <clipPath id={clipPathID}>
-                    <polygon points={points} fill="white" />
-                </clipPath>
-                <foreignObject
-                    width={width}
-                    height={height}
-                    clipPath={urlClipPathID}
-                >
-                    <div style={childrenStyles}>{props.children}</div>
-                </foreignObject>
-                <polygon
-                    points={points}
-                    strokeWidth={strokeWidth}
-                    stroke={strokeColor}
-                    fill="none"
-                />
-            </svg>
-        </div>
+        <>
+            <div style={divStyles}>
+                <svg style={svgStyles}>
+                    <clipPath id={clipPathID}>
+                        <polygon points={points} fill="white" />
+                    </clipPath>
+                    <foreignObject
+                        width={width}
+                        height={height}
+                        clipPath={urlClipPathID}
+                    >
+                        <div style={childrenStyles}>{props.children}</div>
+                    </foreignObject>
+                    <polygon
+                        points={points}
+                        strokeWidth={strokeWidth}
+                        stroke={strokeColor}
+                        fill="none"
+                    />
+                </svg>
+            </div>
+        </>
     )
 }
 
@@ -138,7 +140,6 @@ addPropertyControls(Rectangle, {
         title: "Width",
         defaultValue: 200,
         min: 1,
-        max: 10000,
         step: 1,
         displayStepper: true,
     },
@@ -147,7 +148,6 @@ addPropertyControls(Rectangle, {
         title: "Height",
         defaultValue: 200,
         min: 1,
-        max: 10000,
         step: 1,
         displayStepper: true,
     },
@@ -167,7 +167,7 @@ addPropertyControls(Rectangle, {
     undo_side: {
         type: ControlType.Boolean,
         title: "Undo side",
-        defaultValue: false,
+        defaultValue: true,
         enabledTitle: "No",
         disabledTitle: "Yes",
     },
@@ -226,14 +226,6 @@ addPropertyControls(Rectangle, {
         enabledTitle: "No",
         disabledTitle: "Yes",
     },
-    hslColorStroke: {
-        type: ControlType.Color,
-        title: "Border",
-        defaultValue: "hsla(329, 100%, 50%, 1)",
-        hidden(props) {
-            return props.undo_stroke === true
-        },
-    },
     strokeWidth: {
         type: ControlType.Number,
         title: "Width",
@@ -242,6 +234,14 @@ addPropertyControls(Rectangle, {
         max: 100,
         step: 1,
         displayStepper: false,
+        hidden(props) {
+            return props.undo_stroke === true
+        },
+    },
+    hslColorStroke: {
+        type: ControlType.Color,
+        title: "Color",
+        defaultValue: "hsla(329, 100%, 50%, 1)",
         hidden(props) {
             return props.undo_stroke === true
         },
