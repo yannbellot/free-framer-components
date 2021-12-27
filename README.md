@@ -2,11 +2,11 @@
 
 Figleaf is a package fo two compoenents, allows the designer to create graphic elements and textures close to those found in nature without coding :
 
-* Circle and Rectangle components allow you to create partially determined shapes using random variables.
+* Pattern component allows the generation of textures using different Perlin noise functions. It also allows the creation of colours and gradients whose characteristics (hue, saturation, luminosity, alpha) are partially defined using random variables.
 
 * Distortion component allows a Perlin noise type deformation to be applied to a graphic object.
 
-* Pattern component allows the generation of textures using different Perlin noise functions. It also allows the creation of colours and gradients whose characteristics (hue, saturation, luminosity, alpha) are partially defined using random variables.
+* Circle and Rectangle components allow you to create partially determined shapes using random variables.
 
 The association of the 2 components Pattern and Distortion allows the creation of graphic forms and textures of an infinite richness.
 
@@ -20,30 +20,6 @@ To use Figleaf :
 Warning: Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
 
 ## Feature list
-
-### Rectangular component
-* Adjust width
-* Adjust height
-* Activate or deactivate border
-* Adjust border color and size
-* Adjust hsla random levels of border color
-* Adjust the level of random distortion
-* Disable random transformation of segments (top, right, bottom, left)
-
-### Circular component
-* Adjust diameter
-* Activate or deactivate border
-* Border color and size adjustment
-* Adjust hsla random levels of border color
-* Adjust the level of random distortion
-
-### Distortion component (Perlin noise)
-* Adjust Intensity of distortion
-* Adjust Frequency in x and y
-* Adjust Octave
-* Choose between Random and Manual Seed
-* Adjust value of Manual Seed
-* Apply distortion to a child element
 
 ### Pattern component
 
@@ -75,3 +51,27 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust Saturation random level
 * Adjust Lightness random level
 * Adjust Alpha random level
+
+### Distortion component (Perlin noise)
+* Adjust Intensity of distortion
+* Adjust Frequency in x and y
+* Adjust Octave
+* Choose between Random and Manual Seed
+* Adjust value of Manual Seed
+* Apply distortion to a child element
+
+### Rectangular component
+* Adjust width
+* Adjust height
+* Activate or deactivate border
+* Adjust border color and size
+* Adjust hsla random levels of border color
+* Adjust the level of random distortion
+* Disable random transformation of segments (top, right, bottom, left)
+
+### Circular component
+* Adjust diameter
+* Activate or deactivate border
+* Border color and size adjustment
+* Adjust hsla random levels of border color
+* Adjust the level of random distortion
