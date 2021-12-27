@@ -2,6 +2,8 @@
 
 Figleaf is a package fo two compoenents, allows the designer to create graphic elements and textures close to those found in nature without coding :
 
+* Circle and Rectangle components allow you to create partially determined shapes using random variables.
+
 * Distortion component allows a Perlin noise type deformation to be applied to a graphic object.
 
 * Pattern component allows the generation of textures using different Perlin noise functions. It also allows the creation of colours and gradients whose characteristics (hue, saturation, luminosity, alpha) are partially defined using random variables.
@@ -18,6 +20,27 @@ To use Figleaf :
 Warning: Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
 
 ## Feature list
+
+### Shape feature list
+
+#### Rectangular shape
+* Adjust width
+* Adjust height
+* Activate or deactivate border
+* Adjust border color and size
+* Adjust the level of random distortion
+* Disable random transformation of segments (top, right, bottom, left)
+
+#### Circular shape
+* Diameter adjustment
+* Activate or deactivate border
+* Border color and size adjustment
+* Adjust the level of random distortion
+
+#### Adjust random variations of border color
+* Adjust hue random level
+* Adjust saturation random level
+* Adjust lightness random level
 
 ### Distortion component (Perlin noise)
 * Adjust Intensity of distortion
