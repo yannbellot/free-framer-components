@@ -25,7 +25,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 * Choose between Solid, Gradient and Perlin pattern
 
-#### Perlin noise
+#### Perlin noise pattern
 * Choose between Turbulence and Fractal noise
 * Adjust Frequency in x and y
 * Adjust Octave
@@ -35,7 +35,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust multi-zone of RGBA effects
 * Adjust Color, Intensity, Azimut and Elevation of Lighting effect
 
-#### Gradient color
+#### Gradient color pattern
 * Choose between Linear and Radial gradient
 * Choose between Circular and Elliptic repartition for Radial gradient
 * Choose stop color of gradient
@@ -45,14 +45,14 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust Alpha random level of stop color
 * Adjust gradient distribution and orientation
 
-#### Solid color
+#### Solid color pattern
 * Choose color
 * Adjust Hue random level
 * Adjust Saturation random level
 * Adjust Lightness random level
 * Adjust Alpha random level
 
-### Distortion component (Perlin noise)
+### Distortion component (Perlin noise filter)
 * Adjust Intensity of distortion
 * Adjust Frequency in x and y
 * Adjust Octave
