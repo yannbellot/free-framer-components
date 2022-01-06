@@ -15,6 +15,8 @@ Figleaf allows the creation of graphic forms and textures of an infinite richnes
 To use Figleaf :
 * [Create a Framer account.](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F)
 * Access to web version of Framer or install Framer on your computer.
+* Access to [Figleaf Component](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE) in Framer showcase and clic on `Duplicate on Framer` 
+or
 * Create 5 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt`, `Pattern.txt`, `Rectangle.txt` and `Circular.txt`
 * Copy/paste [code of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
 * Have fun !
@@ -35,7 +37,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust value of Manual Seed
 * Choose between Discrete, Table, Linear and Gamma RGBA effects and Lighting effect
 * Adjust multi-zone of RGBA effects
-* Adjust Color, Intensity, Azimut and Elevation of Lighting effect
+* Adjust Color, Intensity, Reflection, Azimut and Elevation of Lighting effect
 
 #### Gradient color pattern
 * Choose between Linear and Radial gradient
