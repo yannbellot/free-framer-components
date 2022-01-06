@@ -12,13 +12,14 @@ Figleaf is a package of 4 compoenents, allows the designer to create graphic ele
 
 Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
-To use Figleaf :
+To use Framer :
 * [Create a Framer account.](https://login.framer.com/sign-up/?ref=site&redirect=https%3A%2F%2Fframer.com%2F)
 * Access to web version of Framer or install Framer on your computer.
-* Access to [Figleaf Component](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE) in Framer showcase and clic on `Duplicate on Framer` 
 
-or
+To use Figleaf with the demo file :
+* Access to [Figleaf Component](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE) in Framer showcase and clic on **Duplicate on Framer** 
 
+To use figleaf by copy/past the code :
 * Create 5 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt`, `Pattern.txt`, `Rectangle.txt` and `Circular.txt`
 * Copy/paste [code of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
 * Have fun !
