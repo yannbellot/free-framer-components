@@ -28,6 +28,7 @@ THE SOFTWARE.
 
 */
 
+import React, { useState } from "react"
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
 import { motion } from "framer-motion"
 import {
@@ -54,6 +55,7 @@ export default function Pattern(props) {
     // Lighting color
     let lightingColor = props.lightingColor
     let lightingScale = props.lightingScale
+    let diffuseConstant = props.diffuseConstant
 
     // Fill color
     let oFillColor = Color(props.hslColorFill)
@@ -367,6 +369,7 @@ export default function Pattern(props) {
                         <feDiffuseLighting
                             lightingColor={lightingColor}
                             surfaceScale={lightingScale}
+                            diffuseConstant={diffuseConstant}
                         >
                             <feDistantLight
                                 azimuth={azimuth}
@@ -677,6 +680,26 @@ addPropertyControls(Pattern, {
         type: ControlType.Number,
         title: "Intensity",
         defaultValue: 20,
+        min: 0,
+        max: 100,
+        step: 0.1,
+        displayStepper: false,
+        hidden(props) {
+            return (
+                props.effectToggle === 1 ||
+                props.effectToggle === 2 ||
+                props.effectToggle === 3 ||
+                props.effectToggle === 4 ||
+                props.effectToggle === 5 ||
+                props.typeToggle == "b" ||
+                props.typeToggle == "a"
+            )
+        },
+    },
+    diffuseConstant: {
+        type: ControlType.Number,
+        title: "Reflection",
+        defaultValue: 1,
         min: 0,
         max: 100,
         step: 0.1,
