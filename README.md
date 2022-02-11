@@ -8,7 +8,7 @@ Figleaf is a package of 3 components allows the designer to create graphic eleme
 
 * Distortion component allows a Perlin noise type deformation to be applied to a graphic object.
 
-* Colors component allows color effects in hue, saturation, brightness, opacity, contrast, invert, sepia and grayscale defined using random variables.
+* Colors component allows to generate adjustable random variations of color in hue, saturation, brightness, opacity, contrast, invert, sepia and grayscale.
 
 Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
