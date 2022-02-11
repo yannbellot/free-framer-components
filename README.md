@@ -2,7 +2,7 @@
 
 **Generate an infinite number of textures, Perlin noise, color and distortion effects in Framer without coding !**
 
-[Access to Figleaf Component in Framer showcase](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE).
+[→ Access to Figleaf Component in Framer showcase.](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE)
 
 Figleaf is a package of 3 components allows the designer to create graphic elements and textures close to those found in nature :
 
