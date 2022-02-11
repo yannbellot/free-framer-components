@@ -1,8 +1,8 @@
 # Figleaf components for Framer
 
-**Make random design.
+**Make random design.**
 
-Generate an infinite number of textures, Perlin noise, color and distortion effects in Framer without coding !**
+**Generate an infinite number of textures, Perlin noise, color and distortion effects in Framer without coding !**
 
 Figleaf is a package of 3 compoenents, allows the designer to create graphic elements and textures close to those found in nature :
 
