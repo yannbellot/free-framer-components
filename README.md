@@ -40,6 +40,8 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust Color, Intensity, Reflection, Azimut and Elevation of Lighting effect
 
 ### Distortion component
+
+* Choose children frame
 * Adjust Intensity of distortion
 * Adjust Frequency in x and y
 * Adjust Octave
@@ -49,4 +51,6 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust Smoothing
 
 ### Colors component
+
+* Choose children frame
 * Adjust Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia and Grayscale random variation values
