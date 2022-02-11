@@ -2,7 +2,7 @@
 
 **Generate an infinite number of textures, Perlin noise, color and distortion effects in Framer without coding !**
 
-Figleaf is a package of 3 components, allows the designer to create graphic elements and textures close to those found in nature :
+Figleaf is a package of 3 components allows the designer to create graphic elements and textures close to those found in nature :
 
 * Perlin component allows the generation of textures using different Perlin noise functions.
 
