@@ -1,6 +1,6 @@
 /*
 
-FIGLEAF V1.0 for Framer
+FIGLEAF V1.3 for Framer
 A component for subtle and natural random variation
 MIT License
 
@@ -31,19 +31,9 @@ THE SOFTWARE.
 import React, { useState } from "react"
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
 import { motion } from "framer-motion"
-import {
-    getRandomValue,
-    getRandomGap,
-    fIdLink,
-    generateString,
-    fColor,
-    fLinearGradient,
-    fRadialGradient,
-    fStroke,
-    fRect,
-} from "./BasicFunctions.tsx"
+import { getRandomValue, generateString } from "./BasicFunctions.tsx"
 
-// Perlin function
+// Pattern function
 export default function Perlin(props) {
     // Random ID generator
     let randomID = generateString(6)
