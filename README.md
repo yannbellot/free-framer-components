@@ -22,7 +22,7 @@ To use Figleaf with the demo file :
 * [Access to Figleaf demo file in Framer Showcase](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE) and clic on `Duplicate on Framer`.
 
 To use figleaf by copy/past the code :
-* Create 4 code files in Framer Assets : `BasicFunctions.txt`, `Distortion.txt`, `Perlin.txt` and `Colors.txt`.
+* Create 4 code files in Framer Assets : `BasicFunctions.txt`, `Distortions.txt`, `Perlin.txt` and `Colors.txt`.
 * Copy/paste [code of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
 * Have fun !
 
