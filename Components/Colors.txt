@@ -1,6 +1,6 @@
 /*
 
-FIGLEAF V1.0 for Framer
+FIGLEAF V1.3 for Framer
 A component for subtle and natural random variation
 MIT License
 
@@ -34,17 +34,7 @@ import {
     childControl,
     useClonedChild,
 } from "https://framer.com/m/framer/useChild.js"
-import {
-    getRandomValue,
-    getRandomGap,
-    fIdLink,
-    generateString,
-    fColor,
-    fLinearGradient,
-    fRadialGradient,
-    fStroke,
-    fRect,
-} from "./BasicFunctions.tsx"
+import { getRandomGap } from "./BasicFunctions.tsx"
 
 // Colors function
 export default function Colors(props) {
