@@ -6,9 +6,9 @@
 
 Figleaf is a package of 2 components allows the designer to create graphic elements and textures close to those found in nature.
 
-* The **Perlin component** allows the generation of textures using different Perlin noise functions.
+* **Perlin component** allows the generation of textures using different Perlin noise functions.
 
-* The **Filter component** allows you to create adjustable random visual effects: Perlin visual distortions, variation of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
+* **Filter component** allows you to create adjustable random visual effects: Perlin visual distortions, variation of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
 
 Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
