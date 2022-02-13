@@ -20,7 +20,7 @@ To use Figleaf with the demo file :
 * [Access to Figleaf demo file in Framer Showcase](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE) and clic on `Duplicate on Framer`.
 
 To use figleaf by copy/past the code :
-* Create 4 code files in Framer Assets : `BasicFunctions.txt`, `Distortions.txt`, `Perlin.txt` and `Colors.txt`.
+* Create 3 code files in Framer Assets : `BasicFunctions.txt`, `Perlin.txt` and `Filters.txt`.
 * Copy/paste [code of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
 * Have fun !
 
@@ -39,9 +39,12 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust multi-zone of RGBA effects
 * Adjust Color, Intensity, Reflection, Azimut and Elevation of Lighting effect
 
-### Distortion component
+### Filters component
 
 * Choose children frame
+
+#### Distortion effects
+
 * Adjust Intensity of distortion
 * Adjust Frequency in x and y
 * Adjust Octave
@@ -50,7 +53,6 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Apply distortion to a child element
 * Adjust Smoothing
 
-### Colors component
+### Colors and blur effects
 
-* Choose children frame
 * Adjust random variation values in Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia and Grayscale
