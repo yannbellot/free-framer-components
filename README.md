@@ -53,6 +53,6 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Apply distortion to a child element
 * Adjust Smoothing
 
-### Colors and blur effects
+#### Colors and blur effects
 
 * Adjust random variation values in Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
