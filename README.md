@@ -4,14 +4,11 @@
 
 [→ Access to Figleaf demo file in Framer Showcase.](https://www.framer.com/showcase/project/jYAGqQXvxOitU1IFY1VF/?fbclid=IwAR1_tRgVoSXMBw1ICzf5e8MPDdplnNc4iBSzSZROMuRnrnV9f45WN3re3lE)
 
-Figleaf is a package of 2 components allows the designer to create graphic elements and textures close to those found in nature :
+Figleaf is a package of 2 components allows the designer to create graphic elements and textures close to those found in nature.
 
-* Perlin component allows the generation of textures using different Perlin noise functions.
+* The `Perlin` component allows the generation of textures using different Perlin noise functions.
 
-* Filters component allows to generate adjustable random effects in :
-  * a Perlin noise type deformation to be applied to a graphic object.
-
-* Colors component  variations of color in hue, saturation, brightness, opacity, contrast, invert, sepia and grayscale.
+* The `Filter` component allows you to create adjustable random visual effects: visual distortions, variation of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
 
 Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
