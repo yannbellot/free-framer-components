@@ -55,4 +55,4 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 ### Colors and blur effects
 
-* Adjust random variation values in Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia and Grayscale
+* Adjust random variation values in Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
