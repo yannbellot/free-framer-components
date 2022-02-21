@@ -29,11 +29,12 @@ THE SOFTWARE.
 */
 
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
-import { motion } from "framer-motion"
 import {
     childControl,
     useClonedChild,
 } from "https://framer.com/m/framer/useChild.js"
+
+// Import basic functions
 import {
     getRandomGap,
     getRandomValue,
@@ -128,12 +129,60 @@ export default function Filter(props) {
         filter: filterURL + "blur(" + smoothing + "px)",
         overflow: "visible",
     }
+    const welcomeStyles = {
+        backgroundColor: "#EEE",
+        color: "#9966FE",
+        fontSize: "large",
+        padding: "20px",
+        border: "2px #9966FE solid",
+        borderRadius: "8px",
+        width: "500px",
+    }
 
-    // SVG code distortion return
-    if (props.toggle === false) {
+    // Define message to use Filter
+    const welcomeMessage = (
+        <div style={welcomeStyles}>
+            <h2>Filter</h2>
+            <p>
+                <strong>
+                    Filter component allows you to create adjustable random
+                    visual effects: Perlin visual distortions, variation of the
+                    hue, saturation, brightness, opacity, contrast, invert,
+                    sepia, grayscale and blur.
+                </strong>
+            </p>
+            <h3>To use color filters :</h3>
+            <ul>
+                <li>Connect the component to a Child Frame.</li>
+                <li>
+                    Adjust random variation values in 'Hue', 'Saturation',
+                    'Brightness', 'Opacity', 'Contrast', 'Invert', 'Sepia',
+                    'Grayscale' and 'Blur'.
+                </li>
+            </ul>
+            <h3>To use Perlin distortions filter :</h3>
+            <ul>
+                <li>Choose 'Yes' in 'Distortion'.</li>
+                <li>Adjust 'Intensity' of distortion.</li>
+                <li>Adjust 'xFrequency' and 'yFrequency'.</li>
+                <li>Adjust 'Octave'.</li>
+                <li>Adjust 'Smoothing'</li>
+                <li>
+                    Choose 'Manual' in 'Seed' if you want to define seed manualy
+                    and adjust 'Value' of seed.
+                </li>
+            </ul>
+        </div>
+    )
+
+    // Return Filter
+    if (props.children == 0) {
+        return welcomeMessage
+    }
+    if (props.children == 1 || props.toggle === false) {
         return <div style={divStyles}>{props.children}</div>
     }
-    if (props.toggle === true) {
+    if (props.children == 1 || props.toggle === true) {
         return (
             <>
                 <svg style={svgStyles}>
@@ -170,8 +219,8 @@ export default function Filter(props) {
 addPropertyControls(Filter, {
     children: {
         type: ControlType.ComponentInstance,
-        description: "[Documentation](https://google.com)",
     },
+    // Color filters
     hueRotate: {
         type: ControlType.Number,
         title: "Hue",
@@ -254,7 +303,7 @@ addPropertyControls(Filter, {
         step: 1,
         displayStepper: false,
     },
-    // Distortion
+    // Distortion filter
     toggle: {
         type: ControlType.Boolean,
         title: "Distortion",
