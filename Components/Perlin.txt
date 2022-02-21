@@ -28,9 +28,9 @@ THE SOFTWARE.
 
 */
 
-import React, { useState } from "react"
 import { addPropertyControls, ControlType, Color, Frame } from "framer"
-import { motion } from "framer-motion"
+
+// Import basic functions
 import { getRandomValue, generateString } from "./BasicFunctions.tsx"
 
 // Pattern function
