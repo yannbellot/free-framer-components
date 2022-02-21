@@ -53,6 +53,7 @@ export default function Filter(props) {
     let contrastFilter = getRandomGap(100, props.contrast * 100, "PURCENT")
     let sepiaFilter = getRandomGap(0, props.sepia * 100, "PURCENT")
     let blurFilter = getRandomGap(0, props.blur, "NUMBER")
+    let mixBlendMode = props.mixBlendMode
     let filters =
         "hue-rotate(" +
         hueRotateFilter +
@@ -80,20 +81,7 @@ export default function Filter(props) {
         "blur(" +
         blurFilter +
         "px) "
-    console.log(
-        "hue: " +
-            hueRotateFilter +
-            " / saturation: " +
-            saturateFilter +
-            " / brightness: " +
-            brightnessFilter +
-            " / opacity: " +
-            opacityFilter +
-            " / invert: " +
-            invertFilter +
-            " / grayscale: " +
-            grayscaleFilter
-    )
+    console.log(filters)
 
     // Random filter ID generator
     let randomID = generateString(6)
@@ -118,6 +106,7 @@ export default function Filter(props) {
         height: "200px",
         overflow: "visible",
         filter: filters,
+        mixBlendMode: mixBlendMode,
     }
     const svgStyles = {
         overflow: "visible",
@@ -219,6 +208,48 @@ export default function Filter(props) {
 addPropertyControls(Filter, {
     children: {
         type: ControlType.ComponentInstance,
+    },
+    // Mix blend mode filters
+    mixBlendMode: {
+        type: ControlType.Enum,
+        defaultValue: "a",
+        displaySegmentedControl: false,
+        options: [
+            "normal",
+            "multiply",
+            "screen",
+            "overlay",
+            "darken",
+            "lighten",
+            "color-dodge",
+            "color-burn",
+            "hard-light",
+            "soft-light",
+            "difference",
+            "exclusion",
+            "hue",
+            "saturation",
+            "color",
+            "luminosity",
+        ],
+        optionTitles: [
+            "Normal",
+            "Multiply",
+            "Screen",
+            "Overlay",
+            "Darken",
+            "Lighten",
+            "Color dodge",
+            "Color burn",
+            "Hard light",
+            "Soft light",
+            "Difference",
+            "Exclusion",
+            "Hue",
+            "Saturation",
+            "Color",
+            "Luminosity",
+        ],
     },
     // Color filters
     hueRotate: {
