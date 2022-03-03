@@ -81,7 +81,7 @@ export default function Filter(props) {
         "blur(" +
         blurFilter +
         "px) "
-    console.log(filters)
+    //console.log(filters)
 
     // Random filter ID generator
     let randomID = generateString(6)
@@ -100,13 +100,46 @@ export default function Filter(props) {
     }
     let smoothing = props.smoothing
 
+    // Perlin filter animate
+    let animateDur = props.animateDur
+    let animateIntensity = props.animateIntensity
+    let yFrequencyAnimate = yFrequency * (1 + animateIntensity)
+    let xFrequencyAnimate = xFrequency * (1 + animateIntensity)
+    //console.log(yFrequency + " > " + yFrequencyAnimate)
+    let animateValue =
+        xFrequency +
+        "," +
+        yFrequency +
+        ";" +
+        xFrequencyAnimate +
+        "," +
+        yFrequencyAnimate +
+        ";" +
+        xFrequency +
+        "," +
+        yFrequency
+    let svgAnimation
+
+    if (props.toggle === true || props.animateToggle === true)
+        svgAnimation = (
+            <animate
+                attributeName="baseFrequency"
+                values={animateValue}
+                dur={animateDur}
+                repeatCount="indefinite"
+            ></animate>
+        )
+    if (props.toggle === false || props.animateToggle === false) {
+        svgAnimation = 0
+    }
+
     // CSS styles
     const divStyles = {
         width: "200px",
         height: "200px",
         overflow: "visible",
+        WebkitFilter: filters,
         filter: filters,
-        mixBlendMode: mixBlendMode,
     }
     const svgStyles = {
         overflow: "visible",
@@ -117,6 +150,7 @@ export default function Filter(props) {
         WebkitFilter: filterURL,
         filter: filterURL + "blur(" + smoothing + "px)",
         overflow: "visible",
+        mixBlendMode: mixBlendMode,
     }
     const welcomeStyles = {
         backgroundColor: "#EEE",
@@ -165,12 +199,6 @@ export default function Filter(props) {
     )
 
     // Return Filter
-    if (props.children == 0) {
-        return welcomeMessage
-    }
-    if (props.children == 1 || props.toggle === false) {
-        return <div style={divStyles}>{props.children}</div>
-    }
     if (props.children == 1 || props.toggle === true) {
         return (
             <>
@@ -188,7 +216,10 @@ export default function Filter(props) {
                             result={filterID}
                             numOctaves={octaveTurb}
                             seed={seedTurb}
-                        />
+                            id={filterID}
+                        >
+                            {svgAnimation}
+                        </feTurbulence>
                         <feDisplacementMap
                             in="SourceGraphic"
                             in2={filterID}
@@ -201,6 +232,12 @@ export default function Filter(props) {
                 </svg>
             </>
         )
+    }
+    if (props.children == 0) {
+        return welcomeMessage
+    }
+    if (props.children == 1 || props.toggle === false) {
+        return <div style={divStyles}>{props.children}</div>
     }
 }
 
@@ -400,6 +437,41 @@ addPropertyControls(Filter, {
         displayStepper: false,
         hidden(props) {
             return props.toggle === false
+        },
+    },
+    animateToggle: {
+        type: ControlType.Boolean,
+        title: "Animation",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+        hidden(props) {
+            return props.toggle == false
+        },
+    },
+    animateIntensity: {
+        type: ControlType.Number,
+        title: "Animate",
+        defaultValue: 0.3,
+        min: 0.1,
+        max: 2,
+        step: 0.01,
+        displayStepper: false,
+        hidden(props) {
+            return props.toggle === false || props.animateToggle === false
+        },
+    },
+    animateDur: {
+        type: ControlType.Number,
+        title: "During",
+        defaultValue: 30,
+        min: 0.2,
+        max: 120,
+        unit: "sec",
+        step: 0.1,
+        displayStepper: false,
+        hidden(props) {
+            return props.toggle === false || props.animateToggle === false
         },
     },
     seedToggle: {
