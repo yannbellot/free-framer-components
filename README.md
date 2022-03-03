@@ -52,6 +52,9 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust value of Manual Seed
 * Apply distortion to a child element
 * Adjust Smoothing
+* Activate the animation of distortion
+* Choose the number of repetitions of the animation
+* Adjust the Amplitude and Duration of the animation 
 
 #### Colors and blur effects
 
