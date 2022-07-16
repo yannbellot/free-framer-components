@@ -38,7 +38,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 * Choose children frame
 
-#### Perlin distortion effects
+#### Distortion effects
 
 * Adjust Intensity of distortion
 * Adjust Frequency in x and y
