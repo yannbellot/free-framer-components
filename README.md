@@ -52,4 +52,4 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 ### Colors components
 
 * Choose children frame
-* Adjust random variation values in : Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
+* Adjust random variation values in the Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
