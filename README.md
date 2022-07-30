@@ -36,12 +36,9 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Adjust multi-zone of RGBA effects
 * Adjust Color, Intensity, Reflection, Azimut and Elevation of Lighting effect
 
-### Filters component
+### Distortions component
 
 * Choose children frame
-
-#### Distortions compoenent
-
 * Adjust Intensity of distortion
 * Adjust Frequency in x and y
 * Adjust Octave
@@ -55,4 +52,5 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 #### Colors components
 
+* Choose children frame
 * Adjust random variation values in : Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
