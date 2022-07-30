@@ -17,8 +17,8 @@ To use Framer :
 * Access to web version of Framer or install Framer on your computer.
 
 To use Figleaf :
-* Create 3 code files in Framer Assets : `Perlins.txt`, `Colors.txt` and `Distortions.txt`.
-* Copy/paste [code of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
+* Create the code files in Framer Assets : `Perlins.txt`, `Colors.txt` and `Distortions.txt`.
+* Copy/paste [the codes of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
 * Have fun !
 
 Warning: Some display bugs may occur on Safari for Mac and iOS with the Distortion component because the SVG `<feDisplacementMap>` function is misinterpreted.
