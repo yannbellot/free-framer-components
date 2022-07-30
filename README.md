@@ -4,11 +4,11 @@
 
 Figleaf is a package of 3 components allows the designer to create graphic elements and textures close to those found in nature.
 
-* Colors component allows you to create adjustable random color variation effects of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
+* Perlins component allows the generation of textures using different Perlin noise functions.
 
 * Distortions component allows you to create adjustable Perlin visual distortion effects.
 
-* Perlins component allows the generation of textures using different Perlin noise functions.
+* Colors component allows you to create adjustable random color variation effects of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
 
 Figleaf allows the creation and animation of graphic forms and textures of an infinite richness.
 
@@ -25,10 +25,16 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 ## Feature list
 
-#### Colors components
+### Perlins component
 
-* Choose children frame
-* Adjust random variation values in : Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
+* Choose between Turbulence and Fractal noise
+* Adjust Frequency in x and y
+* Adjust Octave
+* Choose between Random and Manual Seed
+* Adjust value of Manual Seed
+* Choose between Discrete, Table, Linear and Gamma RGBA effects and Lighting effect
+* Adjust multi-zone of RGBA effects
+* Adjust Color, Intensity, Reflection, Azimut and Elevation of Lighting effect
 
 ### Distortions component
 
@@ -41,16 +47,9 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Apply distortion to a child element
 * Adjust Smoothing
 * Activate the animation of distortion
-* Choose the number of repetitions of the animation
-* Adjust the Amplitude and Duration of the animation 
+* Adjust the Amplitude and Duration of the animation
 
-### Perlins component
+### Colors components
 
-* Choose between Turbulence and Fractal noise
-* Adjust Frequency in x and y
-* Adjust Octave
-* Choose between Random and Manual Seed
-* Adjust value of Manual Seed
-* Choose between Discrete, Table, Linear and Gamma RGBA effects and Lighting effect
-* Adjust multi-zone of RGBA effects
-* Adjust Color, Intensity, Reflection, Azimut and Elevation of Lighting effect
+* Choose children frame
+* Adjust random variation values in : Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
