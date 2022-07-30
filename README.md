@@ -2,11 +2,13 @@
 
 **Generate an infinite number of textures, Perlin noise, color and distortion effects in Framer without coding !**
 
-Figleaf is a package of 2 components allows the designer to create graphic elements and textures close to those found in nature.
+Figleaf is a package of 3 components allows the designer to create graphic elements and textures close to those found in nature.
 
-* Perlin component allows the generation of textures using different Perlin noise functions.
+* Perlins component allows the generation of textures using different Perlin noise functions.
 
-* Filter component allows you to create adjustable random visual effects: Perlin animated visual distortions, variation of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
+* Colors component allows you to create adjustable random color variation effects of the hue, saturation, brightness, opacity, contrast, invert, sepia, grayscale and blur.
+
+* Distortions component allows you to create adjustable Perlin visual distortion effects.
 
 Figleaf allows the creation of graphic forms and textures of an infinite richness.
 
@@ -15,7 +17,7 @@ To use Framer :
 * Access to web version of Framer or install Framer on your computer.
 
 To use Figleaf :
-* Create 3 code files in Framer Assets : `BasicFunctions.txt`, `Perlin.txt` and `Filters.txt`.
+* Create 3 code files in Framer Assets : `Perlins.txt`, `Colors.txt` and `Distortions.txt`.
 * Copy/paste [code of components](https://github.com/yannbellot/figleaf-framer/tree/main/Components) on files.
 * Have fun !
 
@@ -23,7 +25,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 ## Feature list
 
-### Perlin component
+### Perlins component
 
 * Choose between Turbulence and Fractal noise
 * Adjust Frequency in x and y
@@ -38,7 +40,7 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 
 * Choose children frame
 
-#### Distortion effects
+#### Distortions compoenent
 
 * Adjust Intensity of distortion
 * Adjust Frequency in x and y
@@ -51,6 +53,15 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 * Choose the number of repetitions of the animation
 * Adjust the Amplitude and Duration of the animation 
 
-#### Colors and blur effects
+#### Colors components
 
-* Adjust random variation values in Hue, Saturation, Brightness, Opacity, Contrast, Invert, Sepia, Grayscale and Blur
+* Adjust random variation values in :
+** Hue,
+** Saturation,
+** Brightness,
+** Opacity,
+** Contrast,
+** Invert,
+** Sepia,
+** Grayscale
+** Blur
