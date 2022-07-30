@@ -56,8 +56,8 @@ Warning: Some display bugs may occur on Safari for Mac and iOS with the Distorti
 #### Colors components
 
 * Adjust random variation values in :
-** Hue,
-** Saturation,
+ * Hue,
+ * Saturation,
 ** Brightness,
 ** Opacity,
 ** Contrast,
