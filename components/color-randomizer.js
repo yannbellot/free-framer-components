@@ -1,6 +1,6 @@
 /*
 
-FIGLEAF V1.4 for Framer
+Color randomizer for Framer
 A component for subtle and natural random variation
 MIT License
 
@@ -95,7 +95,7 @@ function generateString(length) {
 }
 
 // Filters function
-export default function Colors(props) {
+export default function Color_Randomizer(props) {
     // Color filters
     let hueRotateFilter = getRandomGap(0, props.hueRotate, "TRIGO")
     let saturateFilter = getRandomGap(100, props.saturate * 100, "NUMBER")
@@ -171,7 +171,7 @@ export default function Colors(props) {
     // Define message to use Filter
     const welcomeMessage = (
         <div style={welcomeStyles}>
-            <h2>Filter</h2>
+            <h2>Colors</h2>
             <p>
                 <strong>
                     Colors component allows you to create adjustable random
@@ -200,7 +200,7 @@ export default function Colors(props) {
 }
 
 // Property Controls
-addPropertyControls(Colors, {
+addPropertyControls(Color_Randomizer, {
     children: {
         type: ControlType.ComponentInstance,
     },
