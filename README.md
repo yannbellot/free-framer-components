@@ -1,3 +1,3 @@
 # Framer Booster
 
-**Utiliser les composants gratuits Framer Booster pour étendre les fonctionnalités de Framer :**
+**Use the free Framer Booster components to extend the functionality of Framer :**
