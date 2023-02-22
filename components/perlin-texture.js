@@ -1,7 +1,7 @@
 /*
 
-FIGLEAF V1.4 for Framer
-A component for subtle and natural random variation
+Perlin Texture for Framer
+A component to make Perlin noise with RGBA effects
 MIT License
 
 // The MIT License
@@ -90,7 +90,8 @@ function generateString(length) {
 }
 
 // Pattern function
-export default function Perlin(props) {
+export default function Perlin_Texture(props) {
+    const { style } = props
     // Random ID generator
     let randomID = generateString(6)
     let maskID = "mask_" + randomID
@@ -161,7 +162,7 @@ export default function Perlin(props) {
     // Basic filter
     if (props.effectToggle === 1) {
         return (
-            <svg width="100%" height="100%">
+            <svg style={{ width: 200, height: 200, ...style }}>
                 <filter id={perlinID}>
                     <feTurbulence
                         type={perlinType}
@@ -184,7 +185,7 @@ export default function Perlin(props) {
     // Table & discrete filter return
     if (props.effectToggle === 2 || props.effectToggle === 3) {
         return (
-            <svg width="100%" height="100%">
+            <svg style={{ width: 200, height: 200, ...style }}>
                 <filter id={perlinID}>
                     <feTurbulence
                         type={perlinType}
@@ -225,7 +226,7 @@ export default function Perlin(props) {
     // Linear filter return
     if (props.effectToggle === 4) {
         return (
-            <svg width="100%" height="100%">
+            <svg style={{ width: 200, height: 200, ...style }}>
                 <filter id={perlinID}>
                     <feTurbulence
                         type={perlinType}
@@ -270,7 +271,7 @@ export default function Perlin(props) {
     // Gamma filter return
     if (props.effectToggle === 5) {
         return (
-            <svg width="100%" height="100%">
+            <svg style={{ width: 200, height: 200, ...style }}>
                 <filter id={perlinID}>
                     <feTurbulence
                         type={perlinType}
@@ -319,7 +320,7 @@ export default function Perlin(props) {
     // Lighting filter return
     if (props.effectToggle === 6) {
         return (
-            <svg width="100%" height="100%">
+            <svg style={{ width: 200, height: 200, ...style }}>
                 <filter id={perlinID}>
                     <feTurbulence
                         type={perlinType}
@@ -352,7 +353,7 @@ export default function Perlin(props) {
 }
 
 // Property Controls
-addPropertyControls(Perlin, {
+addPropertyControls(Perlin_Texture, {
     // Perlin control
     perlinType: {
         type: ControlType.Boolean,
@@ -468,7 +469,7 @@ addPropertyControls(Perlin, {
         title: "x Frequency",
         defaultValue: 0.01,
         min: 0.0001,
-        max: 1.9999,
+        max: 0.05,
         step: 0.001,
         displayStepper: false,
         hidden(props) {
@@ -480,7 +481,7 @@ addPropertyControls(Perlin, {
         title: "y Frequency",
         defaultValue: 0.01,
         min: 0.0001,
-        max: 1.9999,
+        max: 0.05,
         step: 0.001,
         displayStepper: false,
         hidden(props) {
