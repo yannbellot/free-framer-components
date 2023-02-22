@@ -1,7 +1,7 @@
 /*
 
-FIGLEAF V1.4 for Framer
-A component for subtle and natural random variation
+Perlin Distortion for Framer
+A component for subtle and natural random distortions
 MIT License
 
 // The MIT License
@@ -94,7 +94,7 @@ function generateString(length) {
 }
 
 // Filters function
-export default function Distortions(props) {
+export default function Perlin_Distortion(props) {
     // Random filter ID generator
     let randomID = generateString(6)
     let filterID = "filter_" + randomID
@@ -236,7 +236,7 @@ export default function Distortions(props) {
 }
 
 // Property Controls
-addPropertyControls(Distortions, {
+addPropertyControls(Perlin_Distortion, {
     children: {
         type: ControlType.ComponentInstance,
     },
@@ -287,7 +287,7 @@ addPropertyControls(Distortions, {
         step: 0.1,
         displayStepper: false,
     },
-    animate: {
+    /*animate: {
         type: ControlType.Boolean,
         title: "Animation",
         defaultValue: false,
@@ -318,7 +318,7 @@ addPropertyControls(Distortions, {
         hidden(props) {
             return props.animate === false
         },
-    },
+    },*/
     seed: {
         type: ControlType.Boolean,
         title: "Seed",
