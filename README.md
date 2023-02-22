@@ -1,4 +1,4 @@
-# Figleaf for Framer
+# Framer Booster
 
 **Generate an infinite number of textures, Perlin noise, color and distortion effects in Framer without coding !**
 
