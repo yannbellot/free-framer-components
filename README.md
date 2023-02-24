@@ -10,7 +10,7 @@
 * [Confetti](https://github.com/yannbellot/framer-booster/blob/main/components/confetti.js) allows to create a great confetti effect
 
 To use Framer Booster components directly in Framer :
-* Go to [Framer Booster Galery](https://tetragon-interest-876349.framer.app/home-en) is a
+* Go to [Framer Booster Galery](https://tetragon-interest-876349.framer.app/components-en) is a
 * Clic on Copy
 * Paste in your Framer project
 * Have fun !
