@@ -1,6 +1,6 @@
 # Framer Booster
 
-**[Framer Booster](https://tetragon-interest-876349.framer.app/home-en) is a project to create components allows to extend the functionality of [Framer](https://www.framer.com):**
+**[Framer Booster](https://tetragon-interest-876349.framer.app/home-en) is a project to create components allows to extend the functionality of [Framer](https://www.framer.com) :**
 * Perlin component allows to create Perlin clouds & texture
 * Perlin Distortion component allows to create Perlin distortion effects
 * Color Randomizer component allows to create adjustable random color effects
