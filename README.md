@@ -1,6 +1,6 @@
 # Framer Booster
 
-**A project to create components allows to extend the functionality of [Framer](https://www.framer.com) :**
+**A project of components allows to extend the functionality of [Framer](https://www.framer.com) :**
 * [Perlin Texture](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-texture.js) component allows to create Perlin clouds & texture
 * [Perlin Distortion](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-distortion.js) component allows to create Perlin distortion effects
 * [Color Randomizer](https://github.com/yannbellot/framer-booster/blob/main/components/color-randomizer.js) component allows to create adjustable random color effects
