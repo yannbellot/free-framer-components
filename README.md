@@ -8,3 +8,9 @@
 * [Scroll Progress](https://github.com/yannbellot/framer-booster/blob/main/components/scroll-progress.js) allows to create scroll progress bar
 * [Draggable](https://github.com/yannbellot/framer-booster/blob/main/components/draggable.js) allows to make element draggable within a given frame
 * [Confetti](https://github.com/yannbellot/framer-booster/blob/main/components/confetti.js) allows to create a great confetti effect
+
+To use Framer Booster components directly in Framer :
+* Go to [Framer Booster Galery](https://tetragon-interest-876349.framer.app/home-en) is a
+* Clic on Copy
+* Paste in your Framer project
+* Have fun !
