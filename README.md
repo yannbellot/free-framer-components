@@ -19,3 +19,5 @@
 * Clic on Copy
 * Paste in your Framer project
 * Have fun !
+
+### [View component page in official Framer Community.](https://www.framer.community/c/resources/free-code-components)
