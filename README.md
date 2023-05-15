@@ -1,5 +1,7 @@
 # Framer Booster
 
+**[→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)**
+
 ### A free project of components allows to extend the functionality of [Framer](https://www.framer.com) :
 * [Perlin Texture](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-texture.ts) allows to create Perlin clouds & texture
 * [Perlin Distortion](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-distortion.ts) allows to create Perlin distortion effects
@@ -13,8 +15,6 @@
 * [QR Scan](https://github.com/yannbellot/framer-booster/blob/main/components/qr-scan.ts) allows to create QR Code reader
 * [Weather](https://github.com/yannbellot/framer-booster/blob/main/components/weather.ts) allows display weather data from [OpenWeatherMap](https://openweathermap.org/current)
 * [Infinite Scroll](https://github.com/yannbellot/framer-booster/blob/main/components/infinite-scroll.ts) allows to create progressive scroll loading
-
-**[→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)**
 
 ### To use Framer Booster components directly in Framer :
 * Go to [Framer Booster Galery](https://freecomponents.framer.website)
