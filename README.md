@@ -1,5 +1,7 @@
 # Framer Booster
 
+**[Join the Discord project community](https://discord.gg/h6xpD6XD)
+
 **[→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)**
 
 **A free project of components allows to extend the functionality of [Framer](https://www.framer.com):**
