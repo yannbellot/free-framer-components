@@ -6,6 +6,7 @@
 * [Perlin Texture](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-texture.ts) allows to create Perlin clouds & texture
 * [Perlin Distortion](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-distortion.ts) allows to create Perlin distortion effects
 * [Color Randomizer](https://github.com/yannbellot/framer-booster/blob/main/components/color-randomizer.ts) allows to create adjustable random color effects
+* [Image Effects](https://github.com/yannbellot/framer-booster/blob/main/components/image-effect.ts) allows you to choose from 20 visual effects to apply to images
 * [Scroll Progress](https://github.com/yannbellot/framer-booster/blob/main/components/scroll-progress.ts) allows to create scroll progress bar
 * [Draggable](https://github.com/yannbellot/framer-booster/blob/main/components/draggable.ts) allows to make element draggable within a given frame
 * [Confetti](https://github.com/yannbellot/framer-booster/blob/main/components/confetti.ts) allows to create a great confetti effect
