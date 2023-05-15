@@ -1,7 +1,5 @@
 # Framer Booster
 
-### [View component page in official Framer Community.](https://www.framer.community/c/resources/free-code-components)
-
 ### A free project of components allows to extend the functionality of [Framer](https://www.framer.com) :
 * [Perlin Texture](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-texture.ts) allows to create Perlin clouds & texture
 * [Perlin Distortion](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-distortion.ts) allows to create Perlin distortion effects
@@ -21,3 +19,5 @@
 * Clic on Copy
 * Paste in your Framer project
 * Have fun !
+
+### [→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)
