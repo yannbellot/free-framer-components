@@ -1,6 +1,6 @@
 /*
 
-Scroll Progress for Framer
+Strapi for Framer
 MIT License
 
 // The MIT License
@@ -30,6 +30,10 @@ THE SOFTWARE.
 import React from "react"
 import useFetch from "react-fetch-hook"
 import { addPropertyControls, ControlType } from "framer"
+import {
+    Icon,
+    iconKeys,
+} from "https://framer.com/m/Feather-H6aU.js@0pLhZgteIMGONoge6j70"
 
 export default function Strapi(props) {
     const apiURL =
