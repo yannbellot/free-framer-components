@@ -20,4 +20,4 @@
 * Paste in your Framer project
 * Have fun !
 
-* [→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components) *
+**[→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)**
