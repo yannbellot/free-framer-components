@@ -1,6 +1,6 @@
 # Framer Booster
 
-* A free project of components allows to extend the functionality of [Framer](https://www.framer.com) : *
+### A free project of components allows to extend the functionality of [Framer](https://www.framer.com) :
 * [Perlin Texture](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-texture.ts) allows to create Perlin clouds & texture
 * [Perlin Distortion](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-distortion.ts) allows to create Perlin distortion effects
 * [Color Randomizer](https://github.com/yannbellot/framer-booster/blob/main/components/color-randomizer.ts) allows to create adjustable random color effects
@@ -14,7 +14,7 @@
 * [Weather](https://github.com/yannbellot/framer-booster/blob/main/components/weather.ts) allows display weather data from [OpenWeatherMap](https://openweathermap.org/current)
 * [Infinite Scroll](https://github.com/yannbellot/framer-booster/blob/main/components/infinite-scroll.ts) allows to create progressive scroll loading
 
-## To use Framer Booster components directly in Framer :
+### To use Framer Booster components directly in Framer :
 * Go to [Framer Booster Galery](https://freecomponents.framer.website)
 * Clic on Copy
 * Paste in your Framer project
