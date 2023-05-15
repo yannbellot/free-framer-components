@@ -7,6 +7,13 @@
 * [Scroll Progress](https://github.com/yannbellot/framer-booster/blob/main/components/scroll-progress.js) allows to create scroll progress bar
 * [Draggable](https://github.com/yannbellot/framer-booster/blob/main/components/draggable.js) allows to make element draggable within a given frame
 * [Confetti](https://github.com/yannbellot/framer-booster/blob/main/components/confetti.js) allows to create a great confetti effect
+* Countdown allows to create a simple countdown
+* Weather allows to display Weather all over the world.
+* Data Charts allows to create charts based on [VICTORY](https://formidable.com/open-source/victory)
+* Strapi allows to connect Framer to [Strapi](https://strapi.io/)
+* QR Scan allows to create QR Code reader: [Test on your mobile](https://qr-scan-component.framer.website/)
+* Weather allows display weather data from [OpenWeatherMap](https://openweathermap.org/current)
+* Infinite Scroll allows to create progressive scroll loading
 
 To use Framer Booster components directly in Framer :
 * Go to [Framer Booster Galery](https://freecomponents.framer.website)
