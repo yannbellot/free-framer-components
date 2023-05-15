@@ -14,10 +14,10 @@
 * [Weather](https://github.com/yannbellot/framer-booster/blob/main/components/weather.ts) allows display weather data from [OpenWeatherMap](https://openweathermap.org/current)
 * [Infinite Scroll](https://github.com/yannbellot/framer-booster/blob/main/components/infinite-scroll.ts) allows to create progressive scroll loading
 
+**[→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)**
+
 ### To use Framer Booster components directly in Framer :
 * Go to [Framer Booster Galery](https://freecomponents.framer.website)
 * Clic on Copy
 * Paste in your Framer project
 * Have fun !
-
-**[→ View component page in official Framer Community](https://www.framer.community/c/resources/free-code-components)**
