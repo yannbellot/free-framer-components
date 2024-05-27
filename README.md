@@ -1,4 +1,4 @@
-# Framer Booster
+# Free Framer Components
 
 **A free project of components allows to extend the functionality of [Framer](https://www.framer.com):**
 * [Perlin Texture](https://github.com/yannbellot/framer-booster/blob/main/components/perlin-texture.ts) allows to create Perlin clouds & texture
