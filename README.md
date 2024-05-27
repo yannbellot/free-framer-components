@@ -14,6 +14,7 @@
 * [QR Scan](https://github.com/yannbellot/framer-booster/blob/main/components/qr-scan.ts) allows to create QR Code reader
 * [Weather](https://github.com/yannbellot/framer-booster/blob/main/components/weather.ts) allows display weather data from [OpenWeatherMap](https://openweathermap.org/current)
 * [Infinite Scroll](https://github.com/yannbellot/framer-booster/blob/main/components/infinite-scroll.ts) allows to create progressive scroll loading
+* [Cursor Follower](https://github.com/yannbellot/framer-booster/blob/main/components/cursor-follower.ts) allows to create a custom cursor follower
 
 **To use Framer Booster components directly in Framer:**
 * Go to [Free Framer Components Galery](https://freecomponents.framer.website)
