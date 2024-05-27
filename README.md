@@ -18,7 +18,7 @@
 * [iCal Link](https://github.com/yannbellot/framer-booster/blob/main/components/ical-link.ts) allows to create a .ics to load for an event
 * [Image Effect](https://github.com/yannbellot/framer-booster/blob/main/components/image-effect.ts) allows to access to twenty incredible effects for images
 * [Image Magnifier](https://github.com/yannbellot/framer-booster/blob/main/components/image-magnifier.ts) allows to create a custom image magnifier
-* [Weather](https://github.com/yannbellot/framer-booster/blob/main/components/weather.ts) allows to display weather all over the world
+* [Weather](https://github.com/yannbellot/framer-booster/blob/main/components/weather.ts) allows to display weather all over the world - [View demo web site](https://weathercomponent.framer.website)
 
 **To use Framer Booster components directly in Framer:**
 * Go to [Free Framer Components web site](https://freecomponents.framer.website)
