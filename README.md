@@ -18,7 +18,7 @@
 * [iCal Link](https://github.com/yannbellot/framer-booster/blob/main/components/ical-link.ts) allows to create a .ics to load for an event
 
 **To use Framer Booster components directly in Framer:**
-* Go to [Free Framer Components Galery](https://freecomponents.framer.website)
+* Go to [Free Framer Components web site](https://freecomponents.framer.website)
 * Clic on Copy
 * Paste in your Framer project
 * Have fun !
