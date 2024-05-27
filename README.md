@@ -16,7 +16,7 @@
 * [Infinite Scroll](https://github.com/yannbellot/framer-booster/blob/main/components/infinite-scroll.ts) allows to create progressive scroll loading
 
 **To use Framer Booster components directly in Framer:**
-* Go to [Framer Booster Galery](https://freecomponents.framer.website)
+* Go to [Free Framer Components Galery](https://freecomponents.framer.website)
 * Clic on Copy
 * Paste in your Framer project
 * Have fun !
