@@ -28,4 +28,4 @@
 
 **[→ Join our community on Discord](https://discord.gg/h6xpD6XD)**
 
-**[→ View my profil in Framer Community](https://www.framer.community/c/resources/free-code-components](https://www.framer.community/u/8fa74b3e)**
+**[→ View my profil in Framer Community](https://www.framer.community/u/8fa74b3e)**
