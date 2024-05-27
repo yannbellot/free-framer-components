@@ -17,6 +17,7 @@
 * [Cursor Follower](https://github.com/yannbellot/framer-booster/blob/main/components/cursor-follower.ts) allows to create a custom cursor follower
 * [iCal Link](https://github.com/yannbellot/framer-booster/blob/main/components/ical-link.ts) allows to create a .ics to load for an event
 * [Image Effect](https://github.com/yannbellot/framer-booster/blob/main/components/image-effect.ts) allows to access to twenty incredible effects for images
+* [Image Effect](https://github.com/yannbellot/framer-booster/blob/main/components/image-magnifier.ts) allows to create a custom image magnifier
 
 **To use Framer Booster components directly in Framer:**
 * Go to [Free Framer Components web site](https://freecomponents.framer.website)
